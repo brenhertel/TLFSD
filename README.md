@@ -8,7 +8,7 @@ Learning from Demonstration (LfD) is a popular approach that allows humans to te
 
 <img src="https://github.com/brenhertel/TLFSD/blob/main/pictures/paper_figures/reaching_2D.png" alt="" width="318"/> <img src="https://github.com/brenhertel/TLFSD/blob/main/pictures/paper_figures/robot_reaching.png" alt="" width="300"/>
 
-This repository implements the method described in the paper above using Python. Scripts which perform individual experiments are included, as well as other necessary utilities. If you have any questions, please contact Brendan Hertel (brendan_hertel@student.uml.edu)
+This repository implements the method described in the paper above using Python. Scripts which perform individual experiments are included, as well as other necessary utilities. If you have any questions, please contact Brendan Hertel (brendan_hertel@student.uml.edu).
 
 If you use the code present in this repository, please cite the following paper:
 ```
