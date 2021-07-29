@@ -17,10 +17,7 @@ class GMM_GMR(object):
 
     def weighted_fit(self, data, w):
         self.data = data
-        km = my_kmeans(self.numbefOfStates)
-        Priors, Mu, Sigma = weighted_k_means(np.transpose(data), self.numbefOfStates, w)
-        #Priors, Mu, Sigma = km.k_means(np.transpose(data), w)
-        print(Priors)
+        Priors, Mu, Sigma = weighted_k_means(self.data, self.numbefOfStates, w)
         self.Priors, self.Mu, self.Sigma, self.Pix = EM(data, Priors, Mu, Sigma)
 
     def predict(self, inputMat):

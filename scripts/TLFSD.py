@@ -3,19 +3,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 # insert at 1, 0 is the script path (or '' in REPL)
-sys.path.insert(1, 'C:/Users/BH/Documents/GitHub/pearl_test_env/Guassian-Mixture-Models')
+sys.path.insert(1, './Guassian-Mixture-Models')
 from GMM_GMR import GMM_GMR
 import douglas_peucker as dp
 from scipy.optimize import minimize
 import os
 import copy
 
-class LFFD_GMM(object):
+class TLFSD(object):
 
     def __init__(self, sucesses=[], failures=[]):
+        print('INITIALIZING TLFSD')
+    
         self.other_coords = False
         self.n_states = 4
-        self.DEBUG = True    
+        self.DEBUG = False    
         self.obstacles = []
         self.num_obs = 0
         
@@ -47,6 +49,7 @@ class LFFD_GMM(object):
         self.set_params()
             
     def encode_GMMs(self, num_states=4, include_other_systems=False):
+        print('ENCODING GMM/GMR MODELS')
         #encode successful and failed demonstrations into GMMs, then use GMR to get mean and covariance
         self.n_states = num_states
         if (self.num_s > 0):
@@ -139,6 +142,7 @@ class LFFD_GMM(object):
         return
         
     def get_successful_reproduction(self, k=None, indices=[], constraints=[]):
+        print('FINDING SUCCESSFUL REPRODUCTION')
         #get suggest_traj
         self.inds = indices
         self.consts = constraints
@@ -426,7 +430,7 @@ def main1():
             else:
                 f_demos.append(np.transpose(traj))
     
-    obj = LFFD_GMM(s_demos, f_demos)
+    obj = TLFSD(s_demos, f_demos)
     obj.encode_GMMs()
     
     inds = [0, 49]
@@ -468,7 +472,7 @@ def main2():
             traj = dp.DouglasPeuckerPoints(np.transpose(data), 50)
             f_demos.append(np.transpose(traj))
     
-    obj = LFFD_GMM(s_demos, f_demos)
+    obj = TLFSD(s_demos, f_demos)
     obj.encode_GMMs(3, False)
     
     from matplotlib.patches import Rectangle
@@ -503,8 +507,8 @@ def main3():
             else:
                 f_demos.append(np.transpose(traj))
     
-    obj_cart = LFFD_GMM(copy.copy(s_demos), copy.copy(f_demos))
-    obj_all = LFFD_GMM(copy.copy(s_demos), copy.copy(f_demos))
+    obj_cart = TLFSD(copy.copy(s_demos), copy.copy(f_demos))
+    obj_all = TLFSD(copy.copy(s_demos), copy.copy(f_demos))
     obj_cart.encode_GMMs(3, False)
     obj_all.encode_GMMs(5, True)
     
