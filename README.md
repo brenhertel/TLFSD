@@ -1,4 +1,4 @@
-## TLFSD: Trajectory Learning via Failed and Successful Demonstrations
+# TLFSD: Trajectory Learning via Failed and Successful Demonstrations
 
 Implementation of Trajectory Learning via Failed and Successful Demonstrations (TLFSD)
 
@@ -20,3 +20,13 @@ If you use the code present in this repository, please cite the following paper:
   organization={IEEE}
 }
 ```
+
+### Non-TLFSD algorithms implemented here:
+
+Dynamic Movement Primitives (DMPs) as presented by P. Pastor, H. Hoffmann, T. Asfour, and S. Schaal, “Learning and generalization of motor skills by learning from demonstration,” in IEEE International Conference on Robotics and Automation. IEEE, 2009, pp. 763–768. Implementation can be found [here](https://github.com/carlos22/pydmp)
+
+Laplacian Trajectory Editing (LTE) as presented by T. Nierhoff, S. Hirche, and Y. Nakamura, “Spatial adaption of robot trajectories based on laplacian trajectory editing,” Autonomous Robots, vol. 40, no. 1, pp. 159–173, 2016. Implementation based on MATLAB code provided by the authors which is no longer publicly available.
+
+Gaussian Mixture Models/Gaussian Mixture Regression (GMM/GMR) as presented by S. Calinon, F. Guenter, and A. Billard, “On learning, representing, and generalizing a task in a humanoid robot,” IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics), vol. 37, no. 2,pp. 286–298, 2007. Implementation can be found [here](https://github.com/BatyaGG/Gaussian-Mixture-Models)
+
+Gaussian Mixture Models/Gaussian Mixture Regression with weighted Expectation-Maximization (GMM/GMR-wEM) as presented by B. D. Argall, E. L. Sauser, and A. G. Billard, “Tactile guidance for policy refinement and reuse,”  in IEEE 9th International Conference on Development and Learning. IEEE, 2010, pp. 7–12. Original implementation based on paper.
