@@ -15,7 +15,8 @@ If you use the code present in this repository, please cite the following paper:
 @inproceedings{hertel2021TLFSD,
   title={Learning from Successful and Failed Demonstrations via Optimization},
   author={Brendan Hertel and S. Reza Ahmadzadeh},
-  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  booktitle={2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={7807--7812},
   year={2021},
   organization={IEEE}
 }
